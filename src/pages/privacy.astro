@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy - AI Apnea Trainer">
+  <main class="page-content container section">
+    <div class="fade-in">
+      <h1 class="neon-text">Privacy Policy</h1>
+      <p class="subtitle">プライバシーポリシー</p>
+
+      <div class="glass-card policy-card">
+        <p class="last-updated">Last Updated: 2026-01-28</p>
+
+        <section class="policy-section">
+          <h2>English</h2>
+          <p><strong>AiApneaTrainer</strong> respects your privacy. We clearly state how we handle your data below.</p>
+          
+          <h3>1. Data Collection</h3>
+          <p>We do <strong>not</strong> collect, store, or share any personal information, health data, or usage logs on our servers. All data created within the app is stored locally on your device using Apple's SwiftData technology and is not accessible to the developer.</p>
+
+          <h3>2. HealthKit</h3>
+          <p>Currently, this app does not integrate with Apple HealthKit. If future versions introduce this feature, we will ask for explicit permission and this policy will be updated.</p>
+
+          <h3>3. Third-Party Services</h3>
+          <p>This app does not use any third-party analytics or advertising frameworks that track you.</p>
+
+          <h3>4. Contact Us</h3>
+          <p>If you have any questions regarding privacy, please contact us via our <a href="/support">Support Page</a>.</p>
+        </section>
+
+        <hr />
+
+        <section class="policy-section">
+          <h2>日本語</h2>
+          <p><strong>AiApneaTrainer</strong> は、ユーザーのプライバシーを尊重します。本アプリにおける個人情報の取り扱いについて、以下の通り定めます。</p>
+
+          <h3>1. 情報の収集について</h3>
+          <p>本アプリ（開発者）は、ユーザーの個人情報、ヘルスケアデータ、または行動履歴をサーバーへ送信・収集することは<strong>一切ありません</strong>。アプリ内で作成されたデータはすべて、Apple社の SwiftData 技術を用いて<strong>お客様の端末内にのみ</strong>保存されます。開発者がこれらのデータにアクセスすることはできません。</p>
+
+          <h3>2. HealthKit について</h3>
+          <p>現時点では、Apple HealthKit（ヘルスケア）との連携機能は実装されていません。将来的に実装する場合は、明確な許可を求めた上で行われます。</p>
+
+          <h3>3. 第三者サービスについて</h3>
+          <p>本アプリは、ユーザーを追跡するための第三者製解析ツール（Analytics）や広告配信フレームワークを使用していません。</p>
+
+          <h3>4. お問い合わせ</h3>
+          <p>プライバシーポリシーに関するご質問は、<a href="/support">サポート窓口</a>までお問い合わせください。</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page-content {
+    min-height: 70vh;
+    padding-top: 10rem;
+    max-width: 900px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .policy-card {
+    padding: 3rem;
+  }
+
+  .last-updated {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .policy-section {
+    margin-bottom: 4rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .policy-section h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .policy-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+  }
+
+  .policy-section strong {
+    color: #fff;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--glass-border);
+    margin: 4rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .policy-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

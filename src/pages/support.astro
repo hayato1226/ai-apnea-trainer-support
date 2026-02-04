@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Support - AI Apnea Trainer">
+  <main class="page-content container section">
+    <div class="fade-in">
+      <h1 class="neon-text">Support Information</h1>
+      <p class="subtitle">サポート情報</p>
+      
+      <div class="glass-card support-card">
+        <h2>Contact Us / お問い合わせ</h2>
+        <p>
+          For bug reports or feature requests, please use the form below.<br />
+          バグ報告や機能リクエストは、以下のフォームよりご連絡ください。
+        </p>
+        
+        <div class="form-cta">
+          <a href="https://forms.gle/jEKVHKsgUhd9bkPg7" target="_blank" class="btn btn-primary">
+            Open Support Form
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page-content {
+    min-height: 70vh;
+    padding-top: 10rem;
+    max-width: 800px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .support-card {
+    padding: 3rem;
+  }
+
+  .support-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .support-card p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .form-cta {
+    margin-bottom: 3rem;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--glass-border);
+    margin: 3rem 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+</style>

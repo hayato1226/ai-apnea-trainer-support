@@ -1,0 +1,125 @@
+---
+---
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <img src="/assets/app-icon.png" alt="AI Apnea Trainer" class="footer-logo" />
+      <div>
+        <h3>AI Apnea Trainer</h3>
+        <p>Premium Freediving Training</p>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <div class="link-group">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/support">Contact Us</a></li>
+          <li><a href="https://forms.gle/jEKVHKsgUhd9bkPg7">Feedback Form</a></li>
+        </ul>
+      </div>
+      <div class="link-group">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container footer-bottom">
+    <p>&copy; {new Date().getFullYear()} AI Apnea Trainer. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-bg-secondary);
+    padding: 5rem 0 2.5rem;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-brand p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .link-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .link-group ul {
+    list-style: none;
+  }
+
+  .link-group li {
+    margin-bottom: 0.75rem;
+  }
+
+  .link-group a {
+    color: var(--color-text-muted);
+  }
+
+  .link-group a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .footer-brand {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-links {
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+</style>
