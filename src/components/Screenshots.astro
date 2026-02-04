@@ -1,11 +1,41 @@
 ---
 const screens = [
-  { id: "dashboard", title: "Cockpit Dashboard", desc: "Scientific precision, simplified.", img: "/assets/raw/01_Dashboard.png" },
-  { id: "logbook", title: "Metabolic History", desc: "Consistency becomes depth.", img: "/assets/raw/02_Logbook.png" },
-  { id: "coach", title: "Adaptive AI Coach", desc: "Your evolution, tracked.", img: "/assets/raw/04_CoachFeedback.png" },
-  { id: "session", title: "Immersive UI", desc: "Focus where it matters.", img: "/assets/raw/06_TrainingSession.png" },
-  { id: "analytics", title: "Bio-Analytics", desc: "Elite physiological data.", img: "/assets/raw/08_LogbookDetail.png" },
-  { id: "tables", title: "Custom Training", desc: "Elite CO2/O2 tables.", img: "/assets/raw/05_TableDetail.png" }
+  {
+    id: "dashboard",
+    title: "Cockpit Dashboard",
+    desc: "Scientific precision, simplified.",
+    img: "/assets/raw/01_Dashboard.png",
+  },
+  {
+    id: "logbook",
+    title: "Metabolic History",
+    desc: "Consistency becomes depth.",
+    img: "/assets/raw/02_Logbook.png",
+  },
+  {
+    id: "coach",
+    title: "Adaptive AI Coach",
+    desc: "Your evolution, tracked.",
+    img: "/assets/raw/04_CoachFeedback.png",
+  },
+  {
+    id: "session",
+    title: "Immersive UI",
+    desc: "Focus where it matters.",
+    img: "/assets/raw/06_TrainingSession.png",
+  },
+  {
+    id: "analytics",
+    title: "Bio-Analytics",
+    desc: "Elite physiological data.",
+    img: "/assets/raw/08_LogbookDetail.png",
+  },
+  {
+    id: "tables",
+    title: "Custom Training",
+    desc: "Elite CO2/O2 tables.",
+    img: "/assets/raw/05_TableDetail.png",
+  },
 ];
 ---
 
@@ -13,70 +43,125 @@ const screens = [
   <div class="container section">
     <div class="section-header fade-in">
       <h2 class="section-title">The <span class="neon-text">System</span></h2>
-      <p class="section-desc">A professional ecosystem designed for absolute control over your apnea journey.</p>
+      <p class="section-desc">
+        A professional ecosystem designed for absolute control over your apnea
+        journey.
+      </p>
+    </div>
+
+    <div class="swipe-hint fade-in">
+      <span class="hint-text">Swipe to explore</span>
+      <div class="hint-arrows">
+        <svg
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="arrow-icon"
+          ><polyline points="13 17 18 12 13 7"></polyline><polyline
+            points="6 17 11 12 6 7"></polyline></svg
+        >
+      </div>
     </div>
 
     <div class="carousel-container fade-in">
       <button class="carousel-nav prev" aria-label="Previous slide">
-        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="15 18 9 12 15 6"></polyline></svg
+        >
       </button>
-      
+
       <div class="carousel-viewport" id="carousel-viewport">
-        {screens.map((screen) => (
-          <div class="carousel-item" id={`slide-${screen.id}`}>
-            <div class="glass-card carousel-card">
-              <div class="screenshot-container">
-                <img src={screen.img} alt={screen.title} class="carousel-img" loading="lazy" />
-              </div>
-              <div class="carousel-info">
-                <h3>{screen.title}</h3>
-                <p>{screen.desc}</p>
+        {
+          screens.map((screen) => (
+            <div class="carousel-item" id={`slide-${screen.id}`}>
+              <div class="glass-card carousel-card">
+                <div class="screenshot-container">
+                  <img
+                    src={screen.img}
+                    alt={screen.title}
+                    class="carousel-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-info">
+                  <h3>{screen.title}</h3>
+                  <p>{screen.desc}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
       <button class="carousel-nav next" aria-label="Next slide">
-        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
       </button>
 
       <div class="carousel-pagination">
-        {screens.map((_, index) => (
-          <button class={`pagination-dot ${index === 0 ? 'active' : ''}`} data-index={index} aria-label={`Go to slide ${index + 1}`}></button>
-        ))}
+        {
+          screens.map((_, index) => (
+            <button
+              class={`pagination-dot ${index === 0 ? "active" : ""}`}
+              data-index={index}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))
+        }
       </div>
     </div>
   </div>
 </section>
 
 <script>
-  const viewport = document.getElementById('carousel-viewport');
-  const prevBtn = document.querySelector('.carousel-nav.prev');
-  const nextBtn = document.querySelector('.carousel-nav.next');
-  const dots = document.querySelectorAll('.pagination-dot');
+  const viewport = document.getElementById("carousel-viewport");
+  const prevBtn = document.querySelector(".carousel-nav.prev");
+  const nextBtn = document.querySelector(".carousel-nav.next");
+  const dots = document.querySelectorAll(".pagination-dot");
 
   if (viewport && prevBtn && nextBtn) {
     const scrollStep = () => {
-      const firstItem = viewport.querySelector('.carousel-item');
+      const firstItem = viewport.querySelector(".carousel-item");
       return firstItem ? (firstItem as HTMLElement).offsetWidth + 32 : 0; // width + gap
     };
 
-    prevBtn.addEventListener('click', () => {
-      viewport.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+    prevBtn.addEventListener("click", () => {
+      viewport.scrollBy({ left: -scrollStep(), behavior: "smooth" });
     });
 
-    nextBtn.addEventListener('click', () => {
-      viewport.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+    nextBtn.addEventListener("click", () => {
+      viewport.scrollBy({ left: scrollStep(), behavior: "smooth" });
     });
 
-    viewport.addEventListener('scroll', () => {
+    viewport.addEventListener("scroll", () => {
       const scrollLeft = viewport.scrollLeft;
       const step = scrollStep();
       const index = Math.round(scrollLeft / step);
-      
+
       dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
+        dot.classList.toggle("active", i === index);
       });
     });
   }
@@ -86,7 +171,11 @@ const screens = [
   .screenshots-section {
     position: relative;
     padding: 10rem 0;
-    background: radial-gradient(circle at 50% 100%, rgba(0, 243, 255, 0.05) 0%, transparent 50%);
+    background: radial-gradient(
+      circle at 50% 100%,
+      rgba(0, 243, 255, 0.05) 0%,
+      transparent 50%
+    );
   }
 
   .section-header {
@@ -105,6 +194,35 @@ const screens = [
     color: var(--color-text-muted);
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  .swipe-hint {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .hint-arrows {
+    animation: bounce-x 2s infinite;
+  }
+
+  @keyframes bounce-x {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
   }
 
   .carousel-container {
@@ -203,8 +321,12 @@ const screens = [
     transform: translateY(-50%) scale(1.1);
   }
 
-  .carousel-nav.prev { left: -1rem; }
-  .carousel-nav.next { right: -1rem; }
+  .carousel-nav.prev {
+    left: -1rem;
+  }
+  .carousel-nav.next {
+    right: -1rem;
+  }
 
   .carousel-pagination {
     display: flex;
@@ -231,11 +353,26 @@ const screens = [
   }
 
   @media (max-width: 768px) {
+    .screenshots-section {
+      padding: 6rem 0;
+    }
+    .swipe-hint {
+      display: flex;
+    }
     .carousel-item {
-      flex: 0 0 310px; /* Increased from 260px for better balance */
+      flex: 0 0 310px;
+      scroll-snap-align: center;
+    }
+    .carousel-viewport {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      gap: 1.5rem;
+      margin: 0;
+      scroll-padding-left: 1.5rem;
+      scroll-padding-right: 1.5rem;
     }
     .carousel-container {
-      padding: 0 1rem;
+      padding: 0;
     }
     .screenshot-container {
       padding: 0.8rem 0.8rem 0 0.8rem;
@@ -244,7 +381,7 @@ const screens = [
       display: none;
     }
     .carousel-info {
-      padding: 1.5rem; /* Reduced padding to reduce overall height */
+      padding: 1.5rem;
     }
     .carousel-info h3 {
       font-size: 1.25rem;
@@ -252,6 +389,8 @@ const screens = [
     .carousel-info p {
       font-size: 0.85rem;
     }
+    .carousel-pagination {
+      margin-top: 3rem;
+    }
   }
 </style>
-
